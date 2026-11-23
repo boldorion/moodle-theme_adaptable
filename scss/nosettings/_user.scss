@@ -133,7 +133,8 @@
         max-width: 100%;
     }
     .col-md-3 {
-        span.float-sm-right {
+        span.float-sm-right,
+        span.float-sm-end {
             float: none !important;
         }
 

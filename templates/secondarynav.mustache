@@ -19,10 +19,13 @@
 
     Adaptable secondary navigation template.
 
+    Moodle 5.3 renders secondary navigation via the React core/nav/Nav component
+    (core/secondarymoremenu) instead of the legacy core/moremenu markup.
+
     Example context (json):
     {
     }
 }}
-<div class="secondary-navigation align-self-center">
-    {{> core/moremenu}}
+<div class="secondary-navigation align-self-center d-print-none">
+    {{> core/secondarymoremenu}}
 </div>

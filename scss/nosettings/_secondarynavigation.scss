@@ -26,6 +26,7 @@
 .secondary-navigation {
     border-top-style: none;
     border-bottom-style: none;
+
     .navigation {
         background-color: inherit;
         border-bottom: none;
@@ -33,6 +34,8 @@
         margin-bottom: map-get($spacers, 1);
         margin-left: 0;
         margin-right: 0;
+
+        // Legacy NonJS fallback still emits .nav-tabs / .moremenu markup.
         .nav-tabs {
             background-color: inherit;
             border-bottom-style: none;
@@ -40,6 +43,20 @@
             > .nav-item {
                 border-bottom: 1px solid $nav-tabs-border-color;
             }
+        }
+    }
+
+    // Moodle 5.3 React secondary nav (core/secondarymoremenu → NavPill).
+    .secondarynav-tabbar {
+        justify-content: center;
+
+        .mds-nav-pill {
+            border-radius: 0;
+        }
+
+        .mds-nav-pill--selected,
+        .mds-nav-pill.active {
+            border-bottom: 3px solid var(--mds-border-interactive-primary-default, #{$primary});
         }
     }
 }

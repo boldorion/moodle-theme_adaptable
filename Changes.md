@@ -1,3 +1,27 @@
+Change log in version 503.0.0-local (2026041208)
+==========================================
+1. Target Moodle 5.3 (MOODLE_503_STABLE): bump requires / supported / Boost dependency.
+2. Secondary navigation: switch from legacy core/moremenu to React core/secondarymoremenu
+   (MDL-87830 / MDL-89294) so course / activity / admin menu items open and overflow correctly.
+3. Course index drawer: use drawercontrols instead of removed drawerheadercontent (MDL-89050).
+4. Update secondary navigation SCSS for .mds-nav-pill / .secondarynav-tabbar markup.
+5. Admin settings branch check: pass 503 so theme settings no longer show a false incompatibility banner.
+6. Login form: add Moodle 5.3 OAuth2 client confirmation block (hasoauth2client).
+7. Header layouts: render Boost colour mode switcher when experimental colour modes are enabled.
+8. Modal and user tour close buttons: Bootstrap 5 btn-close markup.
+9. Fix navbar search empty-submit typo (input.valUE → input.value).
+10. Mobile primary drawer nested items: bg-light → bg-body-secondary for colour-mode safety.
+11. Theme Font Awesome edit icons: fa-pencil-alt → fa-pen (FA 6/7 naming).
+12. User tour step: use {{endtourlabel}}, drop unused Previous control, match core 503 structure.
+13. Modal template: aria-modal / h2 fs-5 parity with core 503.
+14. File manager viewbar: float-sm-right → float-sm-end.
+15. Overlay menu: replace btn-default/pull-right/row-fluid with BS5 classes.
+16. Mobile drawer custom menu: m-l-* → ms-* (dead BS4 directional utils).
+
+Change log in version 502.2.1 (2026041207)
+==========================================
+1. Fix navbar elements cannot be seen when the background colour is not white.
+
 Change log in version 502.2.0 (2026041206)
 ==========================================
 1. Fix navbar block drawer toggle border not showing.

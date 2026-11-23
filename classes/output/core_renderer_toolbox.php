@@ -2864,7 +2864,7 @@ trait core_renderer_toolbox {
 
         if ($menunode->has_children()) {
             $submenucount++;
-            $content = '<li class="m-l-0">';
+            $content = '<li class="ms-0">';
             $content .= html_writer::start_tag('a', ['href' => '#' . $menuid . $submenucount,
                 'class' => 'list-group-item dropdown-toggle',
                 'aria-haspopup' => 'true', 'data-bs-target' => '#', 'data-bs-toggle' => 'collapse',
@@ -2888,10 +2888,10 @@ trait core_renderer_toolbox {
 
             if ($indent) {
                 $dataindent = 1;
-                $marginclass = 'm-l-1';
+                $marginclass = 'ms-1';
             } else {
                 $dataindent = 0;
-                $marginclass = 'm-l-0';
+                $marginclass = 'ms-0';
             }
 
             $content = '<li class="' . $marginclass . '">';

@@ -37,10 +37,10 @@
     {{< theme_boost/drawer }}
         {{$id}}theme_adaptable-drawers-courseindex{{/id}}
         {{$drawerclasses}}drawer drawer-{{position}}{{#courseindexopen}} show{{/courseindexopen}}{{#stickynavbar}} d-none{{/stickynavbar}}{{/drawerclasses}}
-        {{$drawerheadercontent}}
-            {{> theme_boost/courseindexdrawercontrols}}
-        {{/drawerheadercontent}}
         {{$drawerheading}}{{> theme_boost/courseindexdrawerheading}}{{/drawerheading}}
+        {{$drawercontrols}}
+            {{> theme_boost/courseindexdrawercontrols}}
+        {{/drawercontrols}}
         {{$drawercontent}}
             {{{courseindex}}}
         {{/drawercontent}}

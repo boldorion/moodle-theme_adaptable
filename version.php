@@ -33,19 +33,20 @@ defined('MOODLE_INTERNAL') || die;
 $plugin->component = 'theme_adaptable';
 
 // Adaptable version date (YYYYMMDDrr where rr is the release number).
-$plugin->version = 2026041206;
+// Kept at 2026041208 (+1 over 502.2.1) so official upstream 503 releases upgrade cleanly without a downgrade error.
+$plugin->version = 2026041208;
 
-$plugin->requires = 2026042000.00; // 5.2 (Build: 20260420).  phpcs:ignore Squiz.PHP.CommentedOutCode.Found
+$plugin->requires = 2026100500.00; // 5.3 (Build: 20261005).  phpcs:ignore Squiz.PHP.CommentedOutCode.Found
 
-$plugin->supported = [502, 502];
+$plugin->supported = [503, 503];
 
 // Adaptable version using SemVer (https://semver.org).
-$plugin->release = '502.2.0';
+$plugin->release = '503.0.0-local';
 
 // Adaptable maturity (do not use ALPHA or BETA versions in production sites).
 $plugin->maturity = MATURITY_STABLE;
 
 // Adaptable dependencies (Only Boost as it's the parent theme).
 $plugin->dependencies = [
-    'theme_boost' => 2026042000,
+    'theme_boost' => 2026100500,
 ];

@@ -28,38 +28,33 @@
     * popover-title
 
     Data attributes required for JS:
-    * data-role=prev
     * data-role=next
-    * data-role=pause-resume
-    * data-pause-text
-    * data-resume-text
     * data-role=end
     * data-placeholder=body
     * data-placeholder=title
 
     Context variables required for this template:
-    * None
+    * endtourlabel - Label for the end tour button (from tour config)
 
     Example context (json):
     {
+        "endtourlabel": "Got it"
     }
 
 }}
-<div class="modal-dialog" role="document" data-role="flexitour-step">
-    <div class="modal-content">
-        <div class="tooltip-arrow" data-role="arrow"></div>
-        <div class="modal-header">
-            <h5 class="modal-title" data-placeholder="title"></h5>
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="{{#str}}close, form{{/str}}" data-role="end">
-                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
-            </button>
-        </div>
-        <div class="modal-body" data-placeholder="body">
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-role="previous">{{# str }} previous, moodle {{/ str }}</button>
-            <button type="button" class="btn btn-primary" data-role="next">{{# str }} next, moodle {{/ str }}</button>
-            <button class="btn btn-secondary" data-role="end"> {{# str }} endtour, tool_usertours {{/ str }} </button>
+<div class="modal">
+    <div class="modal-dialog" data-role="flexitour-step">
+        <div class="modal-content">
+            <div class="tooltip-arrow" data-role="arrow"></div>
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" data-placeholder="title"></h2>
+            </div>
+            <div class="modal-body" data-placeholder="body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-role="next">{{# str }} nextstep, tool_usertours {{/ str }}</button>
+                <button class="btn btn-secondary" data-role="end">{{endtourlabel}}</button>
+            </div>
         </div>
     </div>
 </div>
